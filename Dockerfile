@@ -22,4 +22,4 @@ COPY *.py .
 RUN chmod u+x merge-commits.py
 
 # Command to run the executable
-ENTRYPOINT ["python3", "/app/merge-comits.py"]
+ENTRYPOINT ["python3", "merge-comits.py"]
