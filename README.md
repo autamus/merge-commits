@@ -24,5 +24,5 @@ jobs:
         with:
           # repo_location: '/github/workspace/'
           # current_commit: 'specify a hash here if you don't want to use latest.'
-          # pretty_output: 'disable pretty output'
+          # pretty_output: 'false' # disable pretty output
 ```
