@@ -1,0 +1,25 @@
+name: 'Merge Commits Action'
+description: 'A GitHub action to find all of the commits in a PR/Branch merge.'
+author: 'autamus'
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/autamus/merge-commits:latest'
+branding:
+  icon: 'activity'  
+  color: 'blue'
+inputs:
+  repo_location:
+    description: 'Location of the Git Repository'
+    required: false
+    default: '/github/workspace/'
+  current_commit:
+    description: 'A specified merge point commit. Defaults to latest.'
+    required: false
+    default: ''
+  pretty_output:
+    description: 'Print a Pretty Output of the commits.'
+    required: false
+    default: 'true'
+outputs:
+  commits:
+    description: 'Space seperated list of commits in previously merge PR/Branch.'
