@@ -3,7 +3,7 @@ description: 'A GitHub action to find all of the commits in a PR/Branch merge.'
 author: 'autamus'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/autamus/merge-commits:latest'
+  image: 'Dockerfile'
 branding:
   icon: 'activity'  
   color: 'blue'

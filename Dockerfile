@@ -16,10 +16,10 @@ RUN apk add --no-cache \
     git
 
 # Copy files to container
-COPY *.py .
+COPY . /app
 
 # Mark script as executable.
 RUN chmod u+x merge-commits.py
 
 # Command to run the executable
-ENTRYPOINT ["python3", "merge-commits.py"]
+ENTRYPOINT ["python3", "/app/merge-commits.py"]
