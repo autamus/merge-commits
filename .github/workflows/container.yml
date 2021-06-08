@@ -30,4 +30,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/autamus/merge-commit:latest
+            ghcr.io/autamus/merge-commits:latest
