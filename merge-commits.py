@@ -2,7 +2,7 @@
 __author__ = "Alec Scott"
 __license__ = "Apache 2.0"
 
-import git, os
+import git, os, json
 
 def main():
     # Get values from ENV Variables
@@ -35,7 +35,7 @@ def main():
             commits = commits + [current]
             current = git.commit_parents(repo_location, current)[0]
 
-    print(f"""::set-output name=commits::{" ".join(commits)}""")
+    print(f"""::set-output name=commits::{json.dumps(commits)}""")
     if pretty.lower() == "true":
         print("Merge Commits:")
         for merge_commit in commits:
