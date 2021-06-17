@@ -30,10 +30,10 @@ def main():
 
         # Iterate over the git history like a linked list
         # adding every commit
-        current = parent_commits[1]
-        while (current != merge_base_commit):
-            commits = commits + [current]
-            current = git.commit_parents(repo_location, current)[0]
+        current = [parent_commits[1]]
+        while (merge_base_commit not in current):
+            commits = commits + current
+            current = git.commit_parents(repo_location, current[0])
 
     print(f"""::set-output name=commits::{json.dumps(commits)}""")
     if pretty.lower() == "true":
